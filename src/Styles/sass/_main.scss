@@ -1,0 +1,157 @@
+.Collapsible__trigger {
+  display: flex;
+  justify-content: center;
+  margin: 10% 0;
+}
+
+.category {
+  height: 320px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2,
+  p {
+    width: 80%;
+    margin: 0 auto;
+  }
+
+  h2 {
+    font-size: 50px;
+  }
+
+  img {
+    width: 100%;
+  }
+}
+
+.cocktail-container {
+  .drink-list {
+    width: 80%;
+    height: 320px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+  }
+
+  img {
+    width: 60%;
+  }
+
+  .title-wrapper {
+    width: 40%;
+    transform: rotate(-90deg);
+
+    h3 {
+      font-family: 'Montserrat';
+      font-weight: 700;
+      font-size: 28px;
+      text-align: center;
+    }
+  }
+
+  &:nth-of-type(odd) {
+    img {
+      order: 1;
+    }
+  
+    .title-wrapper {
+      order: 2;
+    }
+  }
+
+  &:nth-of-type(even) {
+    img {
+      order: 2;
+    }
+
+    .title-wrapper {
+      order: 1;
+    }
+  }
+}
+
+.gin {
+  background: #6FC3DF;
+}
+
+.vodka {
+  background: #8D82C4;
+}
+
+.rum {
+  background: #EC8D81;
+}
+
+.scotch{
+  background: #E7B788;
+}
+
+.alkoholfrei{
+  background: #8EA9E8;
+}
+
+.zufall{
+  background: #87C5A4;
+}
+
+.map-container {
+  position: relative;
+}
+
+.drink-details {
+  background: #262B46;
+  z-index: 1;
+  min-height: 100%;
+  min-width: 100%;
+  text-align: center;
+  position: fixed;
+  top: 0;
+  visibility: hidden;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+
+  .vector {
+    width: 5%;
+    margin: 0;
+    position: absolute;
+    right: 20px;
+    top: 10px;
+  }
+
+  h3 {
+    font-size: 28px;
+    margin-top: 30px;
+  }
+
+  img {
+    width: 50%;
+    margin: 20px 0 55px 0;
+  }
+
+  .detail-container {
+    display: block;
+    width: 80%;
+    height: fit-content;
+    text-align: start;
+    margin: 0 auto;
+
+    ul {
+      margin: 30px 0;
+    }
+
+    p {
+      width: 100%;
+      margin: 0;
+    }
+  }
+}
+
+.visible {
+  visibility: visible;
+  opacity: 1;
+}
+
+.arrows {
+  width: initial;
+}
