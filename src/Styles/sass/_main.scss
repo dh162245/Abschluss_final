@@ -26,6 +26,30 @@
 }
 
 .cocktail-container {
+  &:nth-of-type(6n + 1) {
+    background: #6FC3DF;
+  }
+
+  &:nth-of-type(6n + 2) {
+    background: #8D82C4;
+  }
+
+  &:nth-of-type(6n + 3) {
+    background: #EC8D81;
+  }
+
+  &:nth-of-type(6n + 4) {
+    background: #E7B788;
+  }
+
+  &:nth-of-type(6n + 5) {
+    background: #8EA9E8;
+  }
+
+  &:nth-of-type(6n + 6) {
+    background: #87C5A4;
+  } 
+
   .drink-list {
     width: 80%;
     height: 320px;
@@ -40,13 +64,18 @@
 
   .title-wrapper {
     width: 40%;
-    transform: rotate(-90deg);
+    height: 80%;
+    transform: scaleX(-1);
+    display: flex;
 
     h3 {
       font-family: 'Montserrat';
       font-weight: 700;
       font-size: 28px;
       text-align: center;
+      writing-mode: vertical-rl;
+      text-orientation: mixed;
+      transform: scaleY(-1);
     }
   }
 
@@ -57,6 +86,10 @@
   
     .title-wrapper {
       order: 2;
+
+      h3 {
+        margin-right: auto;
+      }
     }
   }
 
@@ -67,6 +100,10 @@
 
     .title-wrapper {
       order: 1;
+
+      h3 {
+        margin-left: auto;
+      }
     }
   }
 }

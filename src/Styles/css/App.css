@@ -84,7 +84,7 @@ header .title-section form input[type="text"] {
   margin-right: 10px;
 }
 
-header .title-section form input[type="submit"] {
+header .title-section form input[type="button"] {
   width: 78px;
   height: 32px;
   background: #6FC3DF;
@@ -92,11 +92,11 @@ header .title-section form input[type="submit"] {
   border-radius: 6px;
 }
 
-header .title-section form input[type="submit"]:hover {
+header .title-section form input[type="button"]:hover {
   cursor: pointer;
 }
 
-header .title-section form input[type="submit"]:active {
+header .title-section form input[type="button"]:active {
   background: #43b1d6;
 }
 
@@ -175,6 +175,30 @@ header .title-section form input[type="submit"]:active {
   width: 100%;
 }
 
+.cocktail-container:nth-of-type(6n + 1) {
+  background: #6FC3DF;
+}
+
+.cocktail-container:nth-of-type(6n + 2) {
+  background: #8D82C4;
+}
+
+.cocktail-container:nth-of-type(6n + 3) {
+  background: #EC8D81;
+}
+
+.cocktail-container:nth-of-type(6n + 4) {
+  background: #E7B788;
+}
+
+.cocktail-container:nth-of-type(6n + 5) {
+  background: #8EA9E8;
+}
+
+.cocktail-container:nth-of-type(6n + 6) {
+  background: #87C5A4;
+}
+
 .cocktail-container .drink-list {
   width: 80%;
   height: 320px;
@@ -193,8 +217,12 @@ header .title-section form input[type="submit"]:active {
 
 .cocktail-container .title-wrapper {
   width: 40%;
-  -webkit-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  height: 80%;
+  -webkit-transform: scaleX(-1);
+          transform: scaleX(-1);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
 .cocktail-container .title-wrapper h3 {
@@ -202,6 +230,12 @@ header .title-section form input[type="submit"]:active {
   font-weight: 700;
   font-size: 28px;
   text-align: center;
+  -webkit-writing-mode: vertical-rl;
+      -ms-writing-mode: tb-rl;
+          writing-mode: vertical-rl;
+  text-orientation: mixed;
+  -webkit-transform: scaleY(-1);
+          transform: scaleY(-1);
 }
 
 .cocktail-container:nth-of-type(odd) img {
@@ -216,6 +250,10 @@ header .title-section form input[type="submit"]:active {
           order: 2;
 }
 
+.cocktail-container:nth-of-type(odd) .title-wrapper h3 {
+  margin-right: auto;
+}
+
 .cocktail-container:nth-of-type(even) img {
   -webkit-box-ordinal-group: 3;
       -ms-flex-order: 2;
@@ -226,6 +264,10 @@ header .title-section form input[type="submit"]:active {
   -webkit-box-ordinal-group: 2;
       -ms-flex-order: 1;
           order: 1;
+}
+
+.cocktail-container:nth-of-type(even) .title-wrapper h3 {
+  margin-left: auto;
 }
 
 .gin {
@@ -314,6 +356,74 @@ header .title-section form input[type="submit"]:active {
 
 .arrows {
   width: initial;
+}
+
+h2 {
+  width: 80%;
+  margin: 72px auto 46px auto;
+}
+
+.add-drink-section {
+  width: 80%;
+  margin: 0 auto;
+}
+
+.add-drink-section form input {
+  display: block;
+  width: 293px;
+  height: 30px;
+  border: none;
+  outline: none;
+  padding-left: 13px;
+  margin-bottom: 14px;
+}
+
+.add-drink-section form input[type="submit"] {
+  height: initial;
+  background: #6FC3DF;
+  color: #fff;
+  border-radius: 6px;
+  padding: 16px 0;
+  margin-top: 29px;
+}
+
+.add-drink-section form input[type="submit"]:hover {
+  cursor: pointer;
+}
+
+.add-drink-section form input[type="submit"]:active {
+  background: #43b1d6;
+}
+
+.add-drink-section form textarea {
+  width: 293px;
+  height: 112px;
+  padding: 5px 0 0 13px;
+  margin-bottom: 14px;
+}
+
+.add-drink-section figure {
+  width: 100%;
+  height: 500px;
+  position: relative;
+}
+
+.add-drink-section figure img {
+  width: 50%;
+  position: absolute;
+}
+
+.add-drink-section figure img:nth-of-type(1) {
+  top: 70px;
+}
+
+.add-drink-section figure img:nth-of-type(2) {
+  top: 300px;
+}
+
+.add-drink-section figure img:nth-of-type(3) {
+  top: 0;
+  right: 0;
 }
 
 footer {
