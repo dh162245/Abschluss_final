@@ -7,7 +7,7 @@
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  transition: all 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 
   .menu-button {
     background: none;

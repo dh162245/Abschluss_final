@@ -15,7 +15,7 @@ const SearchField = () => {
   }
 
   return (
-    <form onSubmit={(e) => e.preventDefault()}>
+    <form className="search-field" onSubmit={(e) => e.preventDefault()}>
       <input onChange={getValue} type="text" name="text" placeholder="type something" />
       <input onClick={search} type="button" value="Search" />
     </form>

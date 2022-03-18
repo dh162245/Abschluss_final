@@ -22,7 +22,8 @@ a {
 }
 
 img {
-  width: 100%;
+  width: 240px;
+  height: 240px;
 }
 
 body {
@@ -36,14 +37,14 @@ header {
 }
 
 header .navbar ul {
-  width: 90%;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin: 1rem auto;
+  padding: 0 24px;
+  margin: 15px 0;
 }
 
 header .navbar ul li {
@@ -57,8 +58,7 @@ header .navbar ul li:first-of-type {
 }
 
 header .title-section {
-  width: 80%;
-  margin: auto;
+  padding: 0 48px;
 }
 
 header .title-section h1 {
@@ -74,7 +74,11 @@ header .title-section p {
   margin: 2% 0 10% 0;
 }
 
-header .title-section form input[type="text"] {
+.search-field {
+  padding: 0 48px;
+}
+
+.search-field input[type="text"] {
   width: 128px;
   height: 32px;
   outline: none;
@@ -84,7 +88,7 @@ header .title-section form input[type="text"] {
   margin-right: 10px;
 }
 
-header .title-section form input[type="button"] {
+.search-field input[type="button"] {
   width: 78px;
   height: 32px;
   background: #6FC3DF;
@@ -92,11 +96,11 @@ header .title-section form input[type="button"] {
   border-radius: 6px;
 }
 
-header .title-section form input[type="button"]:hover {
+.search-field input[type="button"]:hover {
   cursor: pointer;
 }
 
-header .title-section form input[type="button"]:active {
+.search-field input[type="button"]:active {
   background: #43b1d6;
 }
 
@@ -109,8 +113,8 @@ header .title-section form input[type="button"]:active {
   visibility: hidden;
   opacity: 0;
   text-align: center;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .menu .menu-button {
@@ -163,8 +167,7 @@ header .title-section form input[type="button"]:active {
 
 .category h2,
 .category p {
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 48px;
 }
 
 .category h2 {
@@ -200,9 +203,8 @@ header .title-section form input[type="button"]:active {
 }
 
 .cocktail-container .drink-list {
-  width: 80%;
+  padding: 0 48px;
   height: 320px;
-  margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -304,16 +306,18 @@ header .title-section form input[type="button"]:active {
   min-height: 100%;
   min-width: 100%;
   text-align: center;
+  padding: 0 48px;
   position: fixed;
   top: 0;
   visibility: hidden;
   opacity: 0;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
+  -webkit-transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+  transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
 
 .drink-details .vector {
-  width: 5%;
+  width: 24px;
+  height: 24px;
   margin: 0;
   position: absolute;
   right: 20px;
@@ -326,18 +330,18 @@ header .title-section form input[type="button"]:active {
 }
 
 .drink-details img {
-  width: 50%;
+  width: 319px;
+  height: 319px;
   margin: 20px 0 55px 0;
 }
 
 .drink-details .detail-container {
   display: block;
-  width: 80%;
+  padding: 0 48px;
   height: -webkit-fit-content;
   height: -moz-fit-content;
   height: fit-content;
   text-align: start;
-  margin: 0 auto;
 }
 
 .drink-details .detail-container ul {
@@ -355,17 +359,17 @@ header .title-section form input[type="button"]:active {
 }
 
 .arrows {
-  width: initial;
+  width: 18px;
+  height: 29px;
 }
 
 h2 {
-  width: 80%;
-  margin: 72px auto 46px auto;
+  padding: 0 48px;
+  margin: 72px 0 46px 0;
 }
 
 .add-drink-section {
-  width: 80%;
-  margin: 0 auto;
+  padding: 0 48px;
 }
 
 .add-drink-section form input {
@@ -404,7 +408,7 @@ h2 {
 
 .add-drink-section figure {
   width: 100%;
-  height: 500px;
+  height: 350px;
   position: relative;
 }
 
@@ -414,21 +418,22 @@ h2 {
 }
 
 .add-drink-section figure img:nth-of-type(1) {
-  top: 70px;
+  top: 100px;
 }
 
 .add-drink-section figure img:nth-of-type(2) {
-  top: 300px;
+  top: 50px;
+  right: -10px;
 }
 
 .add-drink-section figure img:nth-of-type(3) {
-  top: 0;
-  right: 0;
+  width: 40%;
+  top: 250px;
+  left: 40px;
 }
 
 footer {
-  width: 80%;
-  margin: auto;
+  padding: 0 48px;
 }
 
 footer h3 {
@@ -439,5 +444,46 @@ footer h3 {
 footer p {
   line-height: 1.5rem;
   margin: 45px 0 110px 0;
+}
+
+@media (min-width: 481px) {
+  .add-drink-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  .add-drink-section figure {
+    position: static;
+  }
+  .add-drink-section figure img:nth-of-type(1) {
+    width: 287px;
+    height: 209px;
+    top: 590px;
+    left: 379px;
+  }
+  .add-drink-section figure img:nth-of-type(2) {
+    width: 272px;
+    height: 408px;
+    top: 524px;
+    right: 0;
+  }
+  .add-drink-section figure img:nth-of-type(3) {
+    width: 246px;
+    height: 227px;
+    top: 817px;
+    left: 420px;
+  }
+  .category-container,
+  .cocktail-list-container {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+  }
+  .drink-details {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
 }
 /*# sourceMappingURL=App.css.map */

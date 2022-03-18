@@ -5,6 +5,7 @@ import Collapsible from 'react-collapsible';
 import Footer from './footer';
 import ArrowsImg from './arrows';
 import Vector from '../Images/Vector.png';
+import SearchField from './searchField';
 
 const CocktailList = () => {
   const [mix, setMix] = useState([]);
@@ -14,7 +15,7 @@ const CocktailList = () => {
   let apiId = useParams('api')
 
   useEffect(() => {
-    fetch(`http://www.thecocktaildb.com/api/json/v1/1/${apiId.api}`)
+    fetch(`https://www.thecocktaildb.com/api/json/v1/1/${apiId.api}`)
       .then(response => response.json())
       .then(json => {
         setMix(json.drinks);
@@ -32,6 +33,7 @@ const CocktailList = () => {
   return (
     <>
       <Header />
+      <SearchField />
       <Collapsible trigger={<ArrowsImg />}>
         <div>
           <div className='cocktail-list-container'>
@@ -114,9 +116,11 @@ const CocktailList = () => {
               ];
               return (
                 <div key={i} className={`drink-details ${visible ? '' : 'visible'}`}>
-                  <img onClick={() => setVisible(true)} className='vector' src={Vector} alt="-" />
-                  <h3>{item.strDrink}</h3>
-                  <img src={item.strDrinkThumb} alt="-" />
+                  <div className='detail-image-wrapper'>
+                    <img onClick={() => setVisible(true)} className='vector' src={Vector} alt="-" />
+                    <h3>{item.strDrink}</h3>
+                    <img src={item.strDrinkThumb} alt="-" />
+                  </div>
                   <article className='detail-container'>
                     <h4>Zutaten</h4>
                     <ul>

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import SearchField from "./searchField";
 import drinkCategories from '../Data/drinkCategories.json';
 import MenuContent from './menuContent';
 import { Link } from 'react-router-dom';
@@ -35,10 +34,9 @@ const Header = () => {
         />)}
       </ul>
       <section className="title-section">
-        <h1>Cocktails & Getränke!</h1>
-        <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
-        <SearchField />
-      </section>
+      <h1>Cocktails & Getränke!</h1>
+      <p>HERZLICH WILLKOMMEN IN DER WELT DER COCKTAILS UND GETRÄNKE!</p>
+    </section>
     </header>
   );
 }
