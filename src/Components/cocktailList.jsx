@@ -40,7 +40,7 @@ const CocktailList = () => {
             {mix.map((item, i) => {
               return (
                 <div key={i} className='cocktail-container'>
-                  <article onClick={() => {setName(item.strDrink); setVisible(false)}} className="drink-list">
+                  <article onClick={() => { setName(item.strDrink); setVisible(false) }} className="drink-list">
                     <img src={item.strDrinkThumb} alt="-" />
                     <div className="title-wrapper">
                       <h3>{item.strDrink}</h3>
@@ -116,22 +116,24 @@ const CocktailList = () => {
               ];
               return (
                 <div key={i} className={`drink-details ${visible ? '' : 'visible'}`}>
-                  <div className='detail-image-wrapper'>
-                    <img onClick={() => setVisible(true)} className='vector' src={Vector} alt="-" />
-                    <h3>{item.strDrink}</h3>
-                    <img src={item.strDrinkThumb} alt="-" />
+                  <div className='big-wrapper'>
+                    <div className='detail-image-wrapper'>
+                      <img onClick={() => setVisible(true)} className='vector' src={Vector} alt="-" />
+                      <h3>{item.strDrink}</h3>
+                      <img src={item.strDrinkThumb} alt="-" />
+                    </div>
+                    <article className='detail-container'>
+                      <h4>Zutaten</h4>
+                      <ul>
+                        {allInfo.map((info, i) => {
+                          return (
+                            <li key={i}>{info.measure} {info.ingredient}</li>
+                          );
+                        })}
+                      </ul>
+                      <p>{item.strInstructions}</p>
+                    </article>
                   </div>
-                  <article className='detail-container'>
-                    <h4>Zutaten</h4>
-                    <ul>
-                      {allInfo.map((info, i) => {
-                        return (
-                          <li key={i}>{info.measure} {info.ingredient}</li>
-                        );
-                      })}
-                    </ul>
-                    <p>{item.strInstructions}</p>
-                  </article>
                 </div>
               );
             })}

@@ -34,7 +34,28 @@
     grid-template-columns: 1fr 1fr;
   }
 
-  .drink-details {
-    display: flex;
+  .big-wrapper {
+    position: relative;
+
+    .detail-image-wrapper{
+
+      h3{
+        position: absolute;
+        left: 432px;
+        top: 5px;
+      }
+
+      img:nth-of-type(2){
+        position: absolute;
+        top: 61px;
+        left: 0;
+      }
+    }
+
+    .detail-container{
+      position: absolute;
+      left: 386px;
+      top: 105px;
+    }
   }
 }
